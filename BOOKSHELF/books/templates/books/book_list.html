@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page description">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Hello, Folks</h1>
+  </header>
+
+  <main>
+    <p>book list will updated here</p>
+    <ul>
+      {% for book in books%}
+      <li>{{book}}</li> 
+      <a href="{% url 'book-update' book.id %}"><button>Edit</button></a>
+      
+      <button>Delete</button>
+      {% endfor %}
+      
+    </ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
